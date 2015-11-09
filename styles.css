@@ -1,0 +1,81 @@
+@keyframes resize{
+	0%{width: 100%;}
+	100%{width: 80%;}
+}
+*{
+	box-sizing: border-box;
+	margin: 0;
+}
+
+h1 {
+    color: red;
+}
+
+body {
+}
+
+p {
+    color: orange;
+}
+
+input,label{
+	position: absolute;
+	transition: left 1s linear;
+	left: 0;
+}
+
+input{
+	z-index: 0;
+}
+
+label{
+	z-index: 2;
+}
+
+nav, main{
+	display: inline-block;
+}
+
+nav{
+	width: 20%;
+	vertical-align: top;
+	background-color: green;
+	height: 100vh;
+	padding-top: 30px;
+	position: absolute;
+	z-index: 1;
+	left: -20%;
+	transition: left 1s linear;
+}
+
+main{
+	width: 100%;
+	background-color: red;
+	position: relative;
+	transition: all 1s linear;
+	left: 0;
+	padding: 20px;
+	margin-right: 
+}
+
+input:checked + label + nav{
+	left: 0px;
+}
+
+input:checked + label + nav + main{
+	width: 80%;
+	left: 20%;
+}
+
+input:checked + label{
+	left: 20%;
+	padding-left:2%;
+	height: 100vh;
+	background: rgba(1,1,1,0.3);
+	animation: resize 1s linear forwards;
+}
+
+
+
+
+
